@@ -132,6 +132,8 @@ Invoke-Maester -MailUserId $MailRecipient -MailRecipient $MailRecipient -OutputF
 
 - You see a `The term 'Get-MgServicePrincipal' is not recognized` error message
   - You don't have Graph PowerShell installed, you can install it by running `Install-Module Microsoft.Graph.Applications`.
+- You see a `The term 'Get-MtGraphScope' is not recognized` error message
+You don't have the Maester module installed, you can install it by running Install-Module Maester -Scope CurrentUser.
 - You have more than one managed identity with the same name
   - Search for the managed identity in [Enterprise Applications](https://entra.microsoft.com/#view/Microsoft_AAD_IAM/StartboardApplicationsMenuBlade/~/AppAppsPreview) (Remove the **Application type == Enterprise Applications** filter)
   - Copy the **Object ID** and set the `$managedIdentityId` variable in the script above (eg `$managedIdentityId = 'insert-object-id'`).
